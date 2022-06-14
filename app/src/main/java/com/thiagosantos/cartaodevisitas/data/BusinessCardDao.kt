@@ -7,11 +7,12 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 
 @Dao
-interface CartaoVisitaDao {
+interface BusinessCardDao {
 
-    @Query("SELECT * FROM CartaoVisita")
-    fun getAll(): LiveData<List<CartaoVisita>>
+    @Query("SELECT * FROM BusinessCard")
+    fun getAll(): LiveData<List<BusinessCard>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(cartaoVisita: CartaoVisita)
+    suspend fun insert(businessCard: BusinessCard)
+
 }

@@ -1,11 +1,11 @@
 package com.thiagosantos.cartaodevisitas
 
 import android.app.Application
-import com.thiagosantos.cartaodevisitas.data.AppDataBase
-import com.thiagosantos.cartaodevisitas.data.CartaoVisitaRepository
+import com.thiagosantos.cartaodevisitas.data.AppDatabase
 
-class App: Application() {
+import com.thiagosantos.cartaodevisitas.data.BusinessCardRepository
 
-    val dataBase by lazy { AppDataBase.getDataBase(this) }
-    val repository by lazy { CartaoVisitaRepository(dataBase.cartaoDao()) }
+class App : Application() {
+    private val database by lazy { AppDatabase.getDatabase(this) }
+    val repository by lazy { BusinessCardRepository(database.businessDao()) }
 }

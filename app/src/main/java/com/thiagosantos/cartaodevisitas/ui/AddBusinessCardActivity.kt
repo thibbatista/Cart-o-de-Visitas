@@ -7,12 +7,12 @@ import androidx.activity.viewModels
 import com.thiagosantos.cartaodevisitas.App
 import com.thiagosantos.cartaodevisitas.R
 import com.thiagosantos.cartaodevisitas.data.BusinessCard
-import com.thiagosantos.cartaodevisitas.databinding.ActivityAddCartaoVisitaBinding
+import com.thiagosantos.cartaodevisitas.databinding.ActivityAddBusinessCardBinding
 
 
 class AddBusinessCardActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityAddCartaoVisitaBinding
+    private val binding by lazy { ActivityAddBusinessCardBinding.inflate(layoutInflater) }
 
     private val mainViewModel: MainViewModel by viewModels {
         MainViewModelFactory((application as App).repository)
@@ -20,14 +20,11 @@ class AddBusinessCardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAddCartaoVisitaBinding.inflate(layoutInflater)
         setContentView(binding.root)
         insertListeners()
     }
-    private fun insertListeners(){
-        binding.btnClose.setOnClickListener {
-            finish()
-        }
+
+    private fun insertListeners() {
         binding.btnConfirm.setOnClickListener {
             val businessCard = BusinessCard(
                 nome = binding.tilNome.editText?.text.toString(),
@@ -40,6 +37,9 @@ class AddBusinessCardActivity : AppCompatActivity() {
             Toast.makeText(this, R.string.label_show_success, Toast.LENGTH_SHORT).show()
             finish()
         }
-    }
 
+        binding.btnClose.setOnClickListener {
+            finish()
+        }
+    }
 }

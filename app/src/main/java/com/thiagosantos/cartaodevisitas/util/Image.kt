@@ -18,16 +18,33 @@ import java.io.FileOutputStream
 import java.io.OutputStream
 import java.lang.Exception
 
+
+
 class Image {
+    companion object {
 
-    companion object{
-
-        fun share(context: Context, card: View){
-            val bitmap = getScreenShotFromView(card)
-
+        fun share(context: Context, view: View) {
+            val bitmap = getScreenShotFromView(view)
             bitmap?.let {
                 saveMediaToStorage(context, bitmap)
             }
+        }
+
+        private fun getScreenShotFromView(view: View): Bitmap? {
+            var screenshot: Bitmap? = null
+            try {
+                screenshot =
+                    Bitmap.createBitmap(
+                        view.measuredWidth,
+                        view.measuredHeight,
+                        Bitmap.Config.ARGB_8888
+                    )
+                val canvas = Canvas(screenshot)
+                view.draw(canvas)
+            } catch (e: Exception) {
+                Log.e("GFG", "Failed to capture screenshot because:" + e.message)
+            }
+            return screenshot
         }
 
         private fun saveMediaToStorage(context: Context, bitmap: Bitmap) {
@@ -35,9 +52,8 @@ class Image {
 
             var fos: OutputStream? = null
 
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q){
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 context.contentResolver?.also { resolver ->
-
                     val contentValues = ContentValues().apply {
                         put(MediaStore.MediaColumns.DISPLAY_NAME, filename)
                         put(MediaStore.MediaColumns.MIME_TYPE, "image/jpg")
@@ -45,14 +61,14 @@ class Image {
                     }
                     val imageUri: Uri? =
                         resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
+
                     fos = imageUri?.let {
                         shareIntent(context, imageUri)
                         resolver.openOutputStream(it)
                     }
                 }
             } else {
-                //Devices rodando < Q
-
+                // These for devices running on android < Q
                 val imagesDir = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
                 val image = File(imagesDir, filename)
                 shareIntent(context, Uri.fromFile(image))
@@ -60,44 +76,24 @@ class Image {
             }
 
             fos?.use {
-
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 100, it)
                 Toast.makeText(context, "Imagem capturada com sucesso", Toast.LENGTH_SHORT).show()
             }
         }
 
-        private fun getScreenShotFromView(card: View): Bitmap? {
-            var screenshot: Bitmap? = null
-            try {
-                screenshot= Bitmap.createBitmap(
-                    card.measuredWidth,
-                    card.height,
-                    Bitmap.Config.ARGB_8888
-                )
-                val canvas = Canvas(screenshot)
-                card.draw(canvas)
-            }catch (e: Exception){
-                Log.e("Error ->", "Falha ao capturar imagem" + e.message)
-            }
-            return screenshot
-
-        }
-
-        private fun shareIntent(context: Context, imageUri: Uri){
+        private fun shareIntent(context: Context, image: Uri) {
             val shareIntent: Intent = Intent().apply {
-                action =Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_STREAM, imageUri)
-                type = "image/jpg"
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_STREAM, image)
+                type = "image/jpeg"
             }
             context.startActivity(
                 Intent.createChooser(
                     shareIntent,
-                    context.resources.getText(R.string.label_share)
+                    context.resources.getText(R.string.label_share_to)
                 )
             )
-
         }
-
     }
-
 }
+

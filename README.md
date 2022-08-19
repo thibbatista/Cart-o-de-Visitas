@@ -95,7 +95,7 @@ No Android Studio, com o botão direito sobre o projeto, vá em Build → Build 
 
 ## Tecnologias utilizadas
 
-* [Java](http://www.java.com) 
+* [Koltin](https://kotlinlang.org/) 
 * [Android Studio](https://developer.android.com/studio) 
 * [Gradle](https://gradle.org/) 
 * [XML](https://fontawesome.com/) 

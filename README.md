@@ -65,11 +65,6 @@ No Android Studio, clique em Run → Run 'app'
 
 > A primeira execução irá demorar, pois a IDE irá montar e instalar o APK no dispositivo.
 
-O aplicativo estará pronto quando a mensagem abaixo for exibida no Logcat:
-
-```
-move.pdsi.facom.ufu.br.move I/zygote: Compiler allocated XMB to compile void android.widget.TextView.<init>(android.content.Context, android.util.AttributeSet, int, int)
-```
 
 ## Demonstração
 

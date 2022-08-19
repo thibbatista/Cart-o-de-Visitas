@@ -1,6 +1,6 @@
 # Aplicativo Android - MOVE
 
-![](demo/demo_1.png) ![](demo/demo_3.png) ![](demo/demo_10.png)
+![](foto1.png) ![](foto2.png) ![](foto3.png)
 
 Aplicativo Android para cadastro de cartões de visita
 

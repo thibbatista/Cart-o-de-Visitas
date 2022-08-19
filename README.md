@@ -78,9 +78,9 @@ move.pdsi.facom.ufu.br.move I/zygote: Compiler allocated XMB to compile void and
 Use o menu de opções no canto superior esquerdo para navegação:
 
 ```
-Vá em Meus Meios de Transporte → clique em + e cadastre um veículo
-Vá em Viagens e Serviços → clique em + e registre viagens ou gastos
-Vá em Estatísticas → preencha o filtro e veja o resumo das informações do aplicativo
+Na tela inicial clique em + para cadastrar um novo cartão
+Adicione os dados, em cor adicoe uma cor em hexadecimal  ( ex: #FFFFFF para cor Branca) -> Confirmar
+Clique no cartão para compartilhar.
 ```
 
 

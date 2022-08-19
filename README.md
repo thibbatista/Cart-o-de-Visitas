@@ -100,6 +100,10 @@ No Android Studio, com o botão direito sobre o projeto, vá em Build → Build 
 * [Gradle](https://gradle.org/) 
 * [XML](https://fontawesome.com/) 
 
+## Ferramentas utilizadas
+
+* RecyclerView
+* Room DataBase
 
 ## Licença
 

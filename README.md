@@ -6,7 +6,7 @@ Aplicativo Android para cadastro de cartões de visita
 
 ## Funcionalidades
 
-Seleção de cores para os cartões e compartilhamento
+Cadastro , seleção de cores para os cartões e compartilhamento
 
 ## Primeiros Passos
 
@@ -83,9 +83,7 @@ Vá em Viagens e Serviços → clique em + e registre viagens ou gastos
 Vá em Estatísticas → preencha o filtro e veja o resumo das informações do aplicativo
 ```
 
-#### Capturas de tela
 
-[Demo #1](demo/demo_1.png) - [Demo #2](demo/demo_2.png) - [Demo #3](demo/demo_3.png) - [Demo #4](demo/demo_4.png) - [Demo #5](demo/demo_5.png) - [Demo #6](demo/demo_6.png) - [Demo #7](demo/demo_7.png) - [Demo #8](demo/demo_8.png) - [Demo #9](demo/demo_9.png) - [Demo #10](demo/demo_10.png)
 
 ## Deployment
 
@@ -97,17 +95,11 @@ No Android Studio, com o botão direito sobre o projeto, vá em Build → Build 
 
 ## Tecnologias utilizadas
 
-* [Java](http://www.java.com) - Back-end
-* [Android Studio](https://developer.android.com/studio) - IDE com SDK para desenvolvimento Android
-* [Gradle](https://gradle.org/) - Sistema de automação de compilação
-* [XML](https://fontawesome.com/) - Front-end
+* [Java](http://www.java.com) 
+* [Android Studio](https://developer.android.com/studio) 
+* [Gradle](https://gradle.org/) 
+* [XML](https://fontawesome.com/) 
 
-## Autores
-
-* Steffan Martins Alves - Front-end e Activity - [LinkedIn](https://www.linkedin.com/in/steffanmartins/)
-* Heitor Henrique Nunes - Testes - [LinkedIn](https://www.linkedin.com/in/heitor-nunes-7b1322176/)
-* Gabriel Miranda Costa - DAO - [LinkedIn](https://www.linkedin.com/in/gabriel-miranda-costa-908b22b5/)
-* Arthur Rodrigues Cruz - Model - [LinkedIn](https://www.linkedin.com/in/arthur-rodrigues-cruz/)
 
 ## Licença
 

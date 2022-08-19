@@ -12,7 +12,7 @@ Seleção de cores para os cartões e compartilhamento
 
 Siga estas instruções para ter uma cópia do projeto funcionando em seu computador.
 
-> Caso não esteja interessado no desenvolvimento, vá para a página [Releases](https://github.com/steffmartin/android/releases) e baixe o compilado para executar.
+> Caso não esteja interessado no desenvolvimento, vá para a página [Releases](https://github.com/thibbatista/Cartao-de-Visitas/releases) e baixe o compilado para executar.
 
 ### Pré-requisitos
 

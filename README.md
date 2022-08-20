@@ -70,7 +70,6 @@ No Android Studio, clique em Run → Run 'app'
 
 #### Utilização
 
-Use o menu de opções no canto superior esquerdo para navegação:
 
 ```
 Na tela inicial toque em + para cadastrar um novo cartão

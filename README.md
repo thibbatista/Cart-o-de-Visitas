@@ -73,9 +73,9 @@ No Android Studio, clique em Run → Run 'app'
 Use o menu de opções no canto superior esquerdo para navegação:
 
 ```
-Na tela inicial clique em + para cadastrar um novo cartão
-Adicione os dados, em cor adicoe uma cor em hexadecimal  ( ex: #FFFFFF para cor Branca) -> Confirmar
-Clique no cartão para compartilhar.
+Na tela inicial toque em + para cadastrar um novo cartão
+Adicione os dados, em cor adicione uma cor em hexadecimal  ( ex: #FFFFFF para cor Branca) -> Confirmar
+toque no cartão para compartilhar.
 ```
 
 
